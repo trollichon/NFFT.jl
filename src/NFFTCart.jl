@@ -224,7 +224,7 @@ function initConvAdj(D)
 			    tmpQ_d = tmpQ_{d+1}*(p.windowLUT[d][idxbL] + ( idxb-idxbL ) * (p.windowLUT[d][idxbL+1] - p.windowLUT[d][idxbL] ) );
 			    )
 			    )  begin
-				  @Cartesian.nexprs 1 d->((@nref $D g idx) +=tmpQ_d )
+				  @Cartesian.nexprs 1 d->((@Cartesian.nref $D g idx) +=tmpQ_d )
 			      end 
 		# end of nested loops code generation
 		end # of for k=1:p.M  
